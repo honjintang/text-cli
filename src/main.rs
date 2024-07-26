@@ -12,9 +12,11 @@ fn main() {
     let num_of_lines = content.lines().count();
 
     let mut word_count = 0;
+    let mut chars_count = 0;
     for line in content.lines() {
         word_count += line.split_whitespace().count();
+        chars_count += line.chars().count();
     }
 
-    println!("number of lines: {:?}, number of words: {:?}", num_of_lines, word_count);
+    println!("number of lines: {:?}, number of words: {:?}, number of characters: {:?}", num_of_lines, word_count, chars_count);
 }
